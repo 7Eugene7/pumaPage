@@ -1,0 +1,38 @@
+@mixin links($fSize,$fFamily,$color) {
+    font-size:$fSize ;
+    font-family: $fFamily;
+    color:$color;
+}
+@mixin btnLink  {
+    font-family: Poppins;
+    font-weight: Medium;
+    font-size: 18px;
+    line-height: 29px;
+    line-height: 160%;
+    text-decoration: none;
+    color: #fff;
+}
+@mixin btn  {
+    background-color: $bgColorBtn;
+    max-width: 140px;
+    height: 60px;
+    border-radius: 5px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+@mixin title ($fontS) {
+    font-family: 'Source Serif Pro';
+    font-weight: 600;
+    font-size: $fontS;
+    color:#1A0A03;
+}
+@mixin text ($fontSize) {
+    font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 400;
+        font-size: $fontSize;
+        line-height: 160%;
+        color: #1A0A03;
+        opacity: 0.7;
+}

@@ -1,0 +1,54 @@
+.main {
+    margin-top: -100px;
+}
+.shoes {
+    position: relative;
+    padding: 130px 0 150px 0;
+&:before {
+    content: '';
+    background: linear-gradient(-75deg,transparent 290px, #EE5514 1.14%, rgba(238, 85, 20, 0) 133.88%);
+    opacity: 0.1;
+    left: 0;
+    top: 0;
+    width: calc(100% - 562px);
+    height: 100%;
+    position: absolute;
+}   
+    &__container {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0 15px;
+        position: relative;
+        z-index: 1;
+    }
+    &__body {
+    }
+
+    &__items {
+        display: flex;
+    }
+
+    &__item {
+        flex: 1 1 50%;
+        &:nth-child(2) {
+            display: flex;
+            align-items: center;
+            column-gap: 40px;
+            margin: 0 auto;
+        }
+    }
+
+    &__title {
+        @include title($fontS:61px);
+        max-width: 365px;
+        span {
+            color:$bgColorBtn;
+        }
+
+    }
+
+    &__text {
+        @include text($fontSize:16px);
+        max-width: 325px;
+    }
+}
