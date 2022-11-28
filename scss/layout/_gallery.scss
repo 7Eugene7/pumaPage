@@ -1,0 +1,145 @@
+.gallery {
+    display: grid;
+    grid-column: 2/3;
+    padding-top: 140px;
+&__title {
+    @include  title ($fontS : 44px);
+}
+&__subtitle {
+    font-family: 'Source Serif Pro';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 150%;
+    letter-spacing: 0.05em;
+    color: #EE5514;
+}
+&__categories {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 140%;
+    letter-spacing: 0.05em;
+    color: #1A0A03;
+    opacity: 0.7;
+}
+&__buttons {
+    display: flex;
+    padding-bottom: 60px;
+    padding-top: 15px;
+}
+&__container {
+  button {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 140%;
+    letter-spacing: 0.05em;
+    color: #1A0A03;
+    opacity: 0.7;
+    border: none;
+    background: white;
+    transition: all 2s ease 0s;
+  }
+  
+  button:hover {
+    color: #EE5514;
+    text-decoration: underline;
+  }
+  
+  button.active {
+    background-color: white;
+  }
+  
+  .active {
+    background-color: white;
+  }
+  
+  p {
+    text-align: left;
+    padding: 10px;
+  }
+  
+  .content {
+    display: none;
+
+  }
+  
+  .content.active {
+    display: flex;
+    padding: 0;
+    column-gap: 30px;
+    row-gap: 20px;
+  }
+}
+  &__image {
+    box-sizing: border-box;
+    img {
+      max-width: 100%;
+      border: 1px solid transparent;
+      border-radius: 10px;
+      &:hover {
+        border: 1px solid #EE5514;
+     
+       
+      }
+    }
+  }
+
+  &__sub-title {
+    font-family: 'Source Serif Pro';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 150%;
+    color: #1A0A03;
+  }
+
+  &__size {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+    color: #1A0A03;
+    opacity: 0.7;
+    span {
+      font-family: 'Poppins';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 160%;
+      color: #1A0A03;
+    }
+  }
+
+  &__price {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+    color: #1A0A03;
+    opacity: 0.7;
+    span {
+      font-family: 'Poppins';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 160%;
+      color: #1A0A03;
+    }
+  }
+ 
+  &__btn {
+    @include  btn;
+    margin-top: 10px;
+  }
+  &__link {
+    @include btnLink ;
+  }
+
+
+}

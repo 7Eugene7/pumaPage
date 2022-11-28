@@ -160,6 +160,14 @@
         grid-template-columns: 1fr;
     }
 }
+.gallery {
+    &__item {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        
+    }
+}
 }
 
 @media (max-width:500px) {
