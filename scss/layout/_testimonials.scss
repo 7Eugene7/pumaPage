@@ -1,0 +1,128 @@
+
+.testimonials {
+    display: grid;
+    grid-column: 2/3;
+    padding-top: 140px;
+    &__body {
+    }
+
+    &__title {
+        @include title ($fontS:44px);
+        text-align: center;
+        padding-bottom: 60px;
+    }
+
+    &__items {
+    }
+
+    &__item {
+        
+    }
+}
+.testimonials {
+
+    &__item {
+    }
+}
+.item-testimonials {
+    display: flex;
+    position: relative;
+    &__container {
+        max-width: 1100px;
+        overflow: hidden;
+        margin: 0 auto;
+
+    }
+
+    &__carusel {
+        display: flex;
+        position: relative;
+        transition: all 1s ease 0s;
+        &_slider {
+            display: flex;
+            column-gap: 130px;
+        }
+    }
+
+    &__img {
+        max-width: 100%;
+    }
+
+    &__about {
+    }
+
+    &__icon {
+        img {
+            max-width: 100%;
+        }
+    }
+
+    &__sub-title {
+        @include title ($fontS:22px);
+    }
+
+    &__text {
+        @include text ($fontSize:14px);
+        font-style: italic;
+        &:not(:last-child) {
+            padding-bottom: 25px;
+        }
+    }
+
+    &__user {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 160%;
+        color: #1A0A03;
+        &:not(:last-child) {
+            padding-bottom: 10px;
+        }
+
+    }
+
+    &__proffesion {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 160%;
+        color: #1A0A03;
+        opacity: 0.8;
+    }
+}
+.btn-item {
+    position: absolute;
+    display: flex;
+    column-gap: 50px;
+    right: 0;
+    &__btn {
+        padding: 20px;
+        background: #EE5514;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 1s ease 0s;
+        cursor: pointer;
+        &:hover {
+            background: rgb(238, 85, 20,0.7);
+        }
+    }
+    &__prev {
+        transform: rotate(180deg);
+        padding: 20px;
+        background: #EE5514;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 1s ease 0s;
+        cursor: pointer;
+        &:hover {
+            background: rgb(238, 85, 20,0.7);
+        }
+    }
+}
+

@@ -21,9 +21,6 @@ window.addEventListener('load', () => {
     //Counter
     let counter = 0;
     const stepSize = images[0].clientWidth;
-
-    console.log(stepSize)
-
     slider.style.transform = 'translateX(' + `${-stepSize * counter}px)`;
     right.addEventListener('click', () => {
         counter >= images.length - 1 ? (counter = -1) : null;
@@ -31,7 +28,8 @@ window.addEventListener('load', () => {
         counter++;
         slider.style.transform = 'translateX(' + `${-stepSize * counter}px)`;
     });
-}); let isMobile = {
+});
+let isMobile = {
     Android: function () { return navigator.userAgent.match(/Android/i); },
     BlackBerry: function () { return navigator.userAgent.match(/BlackBerry/i); },
     iOS: function () { return navigator.userAgent.match(/iPhone|iPad|iPod/i); },
@@ -77,4 +75,41 @@ tabs.onclick = e => {
         const element = document.getElementById(id);
         element.classList.add("active");
     }
+};
+//slider
+const sliders = document.querySelectorAll('.item-testimonials__carusel_slider'),
+    sliderCarusel = document.querySelector('.item-testimonials__carusel');
+let count = 0;
+let width;
+function init() {
+    console.log('resize');
+    width = document.querySelector('.item-testimonials__container').offsetWidth;
+    sliderCarusel.style.width = width * sliders.length + 'px';
+    sliders.forEach(item => {
+        item.style.width + 'px';
+        item.style.height = 'auto';
+    });
+    rollSlide();
+    console.log(width);
+}
+window.addEventListener('resize', init);
+init();
+document.querySelector('.btn-item__btn').addEventListener('click', function () {
+    count++;
+    if (count >= sliders.length) {
+        count = 0;
+    }
+    rollSlide();
+
+});
+document.querySelector('.btn-item__prev').addEventListener('click', function () {
+    count--;
+    if (count < 0) {
+        count = sliders.length - 1;
+    }
+    rollSlide();
+
+});
+function rollSlide() {
+    sliderCarusel.style.transform = 'translate(-' + count * width + 'px)';
 }
